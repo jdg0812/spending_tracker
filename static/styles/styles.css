@@ -1,0 +1,18 @@
+* {
+    background-color: #f9f7f3;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #0fa3b1;
+
+}
+
+body {
+    text-align: center;
+}
+
+button {
+    background-color: #b5e2fa;
+    border-radius: 20px;
+}

@@ -60,7 +60,7 @@ def update_transaction(id):
     return jsonify({"message": "transaction updated."}), 200
 
 
-@app.route("/delete_transaction/<int:id>", methods=["DELETE"])
+@app.route("/delete_transaction/<int:id>", methods=["POST"])
 def delete_transaction(id):
     transaction = Transactions.query.get(id)
 
@@ -70,7 +70,8 @@ def delete_transaction(id):
     db.session.delete(transaction)
     db.session.commit()
 
-    return jsonify({"message": "Transaction deleted."}), 200
+    print( jsonify({"message": "Transaction deleted."}), 200 )
+    return redirect('/')
 
 
 
